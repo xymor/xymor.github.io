@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://xymor.github.io
+title: Coder in the sky with diamonds
+tagline: thoughts on code and tech
+description: thoughts on code and tech
+paginate: 5
