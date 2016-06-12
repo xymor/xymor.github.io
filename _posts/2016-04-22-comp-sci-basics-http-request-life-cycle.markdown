@@ -5,8 +5,7 @@ layout: post
 tags: [http, web]
 categories: [code]
 ---
-
- Between typing **www.wikipedia.org** in the browser and reading about the [Unexpected Spanish Iquisition](http://en.wikipedia.org/wiki/The_Spanish_Inquisition_%28Monty_Python%29) there's a lot of magic going on. 
+Between typing **www.wikipedia.org** in the browser and reading about the [Unexpected Spanish Iquisition](http://en.wikipedia.org/wiki/The_Spanish_Inquisition_%28Monty_Python%29) there's a lot of magic going on. 
 
 ## DNS lookup
 
