@@ -1,6 +1,6 @@
 ---
 published: true
-title: Ruby sniplets for optimzed tasks
+title: Ruby sniplets for optimized tasks
 layout: post
 ---
 ### Reading a file
