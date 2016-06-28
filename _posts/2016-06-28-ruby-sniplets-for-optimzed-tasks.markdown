@@ -11,3 +11,18 @@ enum = file.lines
 enum.take(100) # take the next 100 
  	
 ~~~~
+
+### Reading from socket
+
+~~~~ruby
+require "socket"
+server = TCPServer.open(8080)
+loop do
+    Thread.fork(server.accept) do |client| 
+        reply = "Connected!"
+        client.puts(reply)
+        client.close
+    end
+end
+~~~~
+ The `loop` directive, which is a more terse than `while true`
