@@ -26,3 +26,26 @@ loop do
 end
 ~~~~
  The `loop` directive, which is a more terse than `while true`
+
+### Dynamic dispatch
+
+This is my solution to the coderbyte's Reverse polish notation challenge. It illustrates ruby's send method dispatch
+
+~~~~ruby
+  expression = "+ - 1 2 5"
+  operands = []
+  evaluated = []
+  
+  expression.each do |c|
+    case c 
+    	when /\d/
+      		evaluated.push(c.to_f)
+        when "-", "/", "*", "+", "**"
+      		operands = evaluated.pop(2)
+      		evaluated.push(operands.first.send(c, operands[1]))
+    end 
+  end  
+  evaluated.first.to_i
+~~~~
+
+
