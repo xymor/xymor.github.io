@@ -25,7 +25,7 @@ loop do
     end
 end
 ~~~~
- The `loop` directive, which is a more terse than `while true`
+ The `loop` directive, which is more terse than `while true`
 
 ### Dynamic dispatch
 
@@ -47,5 +47,3 @@ This is my solution to the coderbyte's Reverse polish notation challenge. It ill
   end  
   evaluated.first.to_i
 ~~~~
-
-
