@@ -25,7 +25,7 @@ loop do
     end
 end
 ~~~~
- The `loop` directive, which is more terse than `while true`
+ The `loop` directive is more terse than `while true`
 
 ### Dynamic dispatch
 
