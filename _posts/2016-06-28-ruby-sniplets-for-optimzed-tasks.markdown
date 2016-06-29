@@ -2,6 +2,8 @@
 published: true
 title: Ruby sniplets for optimized tasks
 layout: post
+tags: [ruby, rails, performance]
+categories: [ruby]
 ---
 ### Reading a file
 
@@ -47,3 +49,24 @@ This is my solution to the coderbyte's Reverse polish notation challenge. It ill
   end  
   evaluated.first.to_i
 ~~~~
+
+### Rails gotcha, avoid active record magic when dealing with bulk objects
+
+ Consider you are trying to recover all tags, you're inclined to write:
+
+~~~~ruby
+tasks = Task.find(:all, :include => :tags)
+~~~~
+
+But tags are often value objects, only their name matters and there's often no logic attached to this state. So consider using instead: 
+
+~~~~ruby
+tasks = Task.select <<-MLINE
+      *,
+      array(
+        select tags.name from tags inner join product_tags on (tags.id = products_tags.tag_id)
+        where products_tags.product_id=products.id
+      ) as tag_names
+    MLINE
+~~~~
+It's much less sexy but much faster. 
