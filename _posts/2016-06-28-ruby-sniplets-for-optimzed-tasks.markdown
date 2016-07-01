@@ -61,7 +61,7 @@ tasks = Task.find(:all, :include => :tags)
 But tags are often value objects, only their name matters and there's often no logic attached to this state. So consider using instead: 
 
 ~~~~ruby
-tasks = Task.select <<-MLINE
+tags = Tag.select <<-MLINE
       *,
       array(
         select tags.name from tags inner join product_tags on (tags.id = products_tags.tag_id)
@@ -69,4 +69,4 @@ tasks = Task.select <<-MLINE
       ) as tag_names
     MLINE
 ~~~~
-It's much less sexy but much faster. 
+It's much less sexy but much faster.
