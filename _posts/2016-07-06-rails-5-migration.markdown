@@ -9,6 +9,6 @@ I'm migrating my app to R5, it's mostly painless but here's a few caveats.
 
  Mongoid head is compatible with Rails 5 as of 2016-07-02 so use it in your gem file. 
 
-˜˜˜˜˜ruby
+~~~~ruby
 gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
-˜˜˜˜˜
+~~~~
