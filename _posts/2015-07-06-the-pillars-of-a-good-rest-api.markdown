@@ -6,7 +6,7 @@ tags: [rest, development, ]
 ---
 The pillars of a Rest API
 
-Scalability | Security | Documentation | Versioning | Sandbox
+Scalability | Security | Documentation | Versioning | Sandbox 
 
 1. Scalability
 No one likes a fail whale, make sure your service can scale properly to serve your customers. Cloud elasticity is a great help in this area. 
