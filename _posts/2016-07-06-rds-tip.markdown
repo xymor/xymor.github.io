@@ -1,0 +1,15 @@
+---
+published: true
+title: RDS tip
+layout: post
+tags: [aws, devops, rds]
+---
+These are estimates based on how much ram a mysql instance uses to sustain a connection. If you're running heavy joins, etc these will increase a lot so use them as an upper limit. 
+
+t1.micro: 34 connections
+m1.small: 150 connections
+m1.large: 640 connections
+m1.xlarge: 1263 connections
+m2.xlarge: 1441 connections
+m2.2xlarge: 2900 connections
+m2.4xlarge: 5816 connections
