@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Rails 5 migration
 layout: post
 ---
